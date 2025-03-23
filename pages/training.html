@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Neural Networks - From Calculus to AI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">Calculus to AI</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                    <li><a href="neural_networks.html">Neural Networks</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="code_examples.html">Code Examples</a></li>
+                    <li><a href="teaching.html">Teaching Resources</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>Training Neural Networks</li>
+            </ul>
+        </div>
+
+        <h1>Training Neural Networks: Backpropagation and Gradient Descent</h1>
+        
+        <section>
+            <h2>Loss Functions</h2>
+            <p>Loss functions measure how far the network's predictions are from the actual values. They quantify the error in the model's predictions, and the goal of training is to minimize this error.</p>
+            
+            <p>Common loss functions include:</p>
+            
+            <ul>
+                <li><strong>Mean Squared Error (MSE):</strong> Used for regression problems
+                    <pre><code>L = (1/n) * Σ(y_pred - y_true)²</code></pre>
+                </li>
+                <li><strong>Binary Cross-Entropy:</strong> Used for binary classification
+                    <pre><code>L = -(1/n) * Σ[y_true*log(y_pred) + (1-y_true)*log(1-y_pred)]</code></pre>
+                </li>
+                <li><strong>Categorical Cross-Entropy:</strong> Used for multi-class classification
+                    <pre><code>L = -(1/n) * Σ Σ y_true_ij * log(y_pred_ij)</code></pre>
+                </li>
+            </ul>
+            
+            <p>The choice of loss function depends on the type of problem you're solving. The goal of training is to find weights that minimize the loss function, and calculus helps us find this minimum by computing the gradient of the loss function with respect to the weights.</p>
+        </section>
+
+        <section>
+            <h2>Backpropagation</h2>
+            <p>Backpropagation is the algorithm used to compute gradients in neural networks. It works by propagating the error backward through the network, using the chain rule to compute how each weight contributes to the error.</p>
+            
+            <div class="image-container">
+                <img src="../images/backpropagation.png" alt="Backpropagation">
+                <p class="caption">Backpropagation uses the chain rule to efficiently compute gradients</p>
+            </div>
+            
+            <p>The key insight of backpropagation is that we can efficiently compute the gradient of the loss function with respect to each weight by working backward from the output layer to the input layer, reusing intermediate calculations.</p>
+            
+            <div class="image-container">
+                <img src="../images/gradient_calculation.png" alt="Gradient Calculation">
+                <p class="caption">Detailed calculation of gradients using the chain rule</p>
+            </div>
+            
+            <p>This diagram shows the detailed calculation of gradients in a simple neural network. We start by computing the error at the output layer, then use the chain rule to propagate this error backward through the network. This gives us the gradient of the loss function with respect to each weight, which we use to update the weights.</p>
+        </section>
+
+        <section>
+            <h2>Backpropagation Algorithm</h2>
+            <p>The backpropagation algorithm consists of the following steps:</p>
+            
+            <div class="image-container">
+                <img src="../images/backpropagation_steps.png" alt="Backpropagation Steps">
+                <p class="caption">Step-by-step process of backpropagation</p>
+            </div>
+            
+            <ol>
+                <li><strong>Forward Pass:</strong> Compute the output of the network for a given input</li>
+                <li><strong>Compute Loss:</strong> Calculate the error between the predicted output and the actual output</li>
+                <li><strong>Backward Pass:</strong>
+                    <ul>
+                        <li>Compute the gradient of the loss with respect to the output layer weights</li>
+                        <li>Propagate the gradients backward through the network using the chain rule</li>
+                        <li>Compute the gradient of the loss with respect to each weight in the network</li>
+                    </ul>
+                </li>
+                <li><strong>Update Weights:</strong> Adjust the weights using gradient descent to minimize the loss</li>
+            </ol>
+            
+            <p>Mathematically, for a neural network with L layers, the backpropagation algorithm can be represented as:</p>
+            
+            <pre><code># Forward pass
+A⁰ = X
+For l = 1 to L:
+    Z^l = A^(l-1)W^l + b^l
+    A^l = σ^l(Z^l)
+Y_pred = A^L
+
+# Compute loss
+L = loss_function(Y_pred, Y_true)
+
+# Backward pass
+dA^L = ∂L/∂A^L
+For l = L to 1:
+    dZ^l = dA^l * σ'^l(Z^l)
+    dW^l = (1/m) * (A^(l-1))^T * dZ^l
+    db^l = (1/m) * sum(dZ^l, axis=0)
+    if l > 1:
+        dA^(l-1) = dZ^l * (W^l)^T
+
+# Update weights
+For l = 1 to L:
+    W^l = W^l - learning_rate * dW^l
+    b^l = b^l - learning_rate * db^l</code></pre>
+            
+            <p>Where:</p>
+            <ul>
+                <li>dA^l is the gradient of the loss with respect to the activation of layer l</li>
+                <li>dZ^l is the gradient of the loss with respect to the pre-activation of layer l</li>
+                <li>dW^l is the gradient of the loss with respect to the weights of layer l</li>
+                <li>db^l is the gradient of the loss with respect to the biases of layer l</li>
+                <li>σ'^l is the derivative of the activation function for layer l</li>
+                <li>m is the number of training examples</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gradient Descent Optimization</h2>
+            <p>Once we have computed the gradients using backpropagation, we use gradient descent to update the weights in a way that minimizes the loss function.</p>
+            
+            <p>The basic update rule for gradient descent is:</p>
+            <pre><code>θ = θ - α * ∇J(θ)</code></pre>
+            
+            <p>Where:</p>
+            <ul>
+                <li>θ represents the parameters (weights and biases)</li>
+                <li>α is the learning rate (step size)</li>
+                <li>∇J(θ) is the gradient of the loss function with respect to the parameters</li>
+            </ul>
+            
+            <p>There are several variants of gradient descent:</p>
+            
+            <ul>
+                <li><strong>Batch Gradient Descent:</strong> Computes the gradient using the entire dataset</li>
+                <li><strong>Stochastic Gradient Descent (SGD):</strong> Computes the gradient using a single training example</li>
+                <li><strong>Mini-batch Gradient Descent:</strong> Computes the gradient using a small batch of training examples</li>
+            </ul>
+            
+            <p>Advanced optimization algorithms like Adam, RMSprop, and Adagrad build on the basic gradient descent algorithm by adapting the learning rate for each parameter based on historical gradient information.</p>
+        </section>
+
+        <section>
+            <h2>The Role of Calculus in Training</h2>
+            <p>Calculus plays a crucial role in training neural networks:</p>
+            
+            <ul>
+                <li><strong>Partial Derivatives:</strong> Used to compute how each weight affects the loss</li>
+                <li><strong>Chain Rule:</strong> Enables efficient computation of gradients through multiple layers</li>
+                <li><strong>Gradient Vectors:</strong> Provide the direction of steepest descent for optimization</li>
+                <li><strong>Optimization Theory:</strong> Guides the search for minima in the loss landscape</li>
+            </ul>
+            
+            <p>Without calculus, particularly the chain rule and partial differentiation, training deep neural networks would be computationally infeasible. These mathematical concepts are what make deep learning possible.</p>
+        </section>
+
+        <div class="continue-exploring">
+            <h3>Continue Exploring</h3>
+            <ul>
+                <li><a href="mathematical_foundations.html">Mathematical Foundations of Deep Learning</a></li>
+                <li><a href="neural_networks.html">Neural Network Architecture and Forward Propagation</a></li>
+                <li><a href="code_examples.html">Code Examples and Implementations</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                        <li><a href="neural_networks.html">Neural Networks</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="code_examples.html">Code Examples</a></li>
+                        <li><a href="teaching.html">Teaching Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.deeplearningbook.org/" target="_blank">Deep Learning Book</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank">3Blue1Brown Neural Networks</a></li>
+                        <li><a href="http://cs231n.stanford.edu/" target="_blank">Stanford CS231n</a></li>
+                        <li><a href="http://neuralnetworksanddeeplearning.com/" target="_blank">Neural Networks and Deep Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About This Workshop</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 From Calculus to AI Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

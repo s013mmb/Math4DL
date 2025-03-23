@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mbazz\\source\\repos\\Math4DL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\neural_network_architecture.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\loss_history.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_descent_contour.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_descent_3d.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_calculation.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\decision_boundary.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\chain_rule_visualization.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\chain_rule_3d.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\backpropagation_steps.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\backpropagation.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\activation_functions.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\css\\interactive.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\interactive.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\demos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "neural_network_architecture.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\neural_network_architecture.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\neural_network_architecture.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:18.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "loss_history.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\loss_history.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\loss_history.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:17.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "gradient_descent_contour.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_descent_contour.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_descent_contour.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:16.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "gradient_descent_3d.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_descent_3d.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_descent_3d.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:15.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "gradient_calculation.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_calculation.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\gradient_calculation.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:14.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "decision_boundary.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\decision_boundary.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\decision_boundary.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:13.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "chain_rule_visualization.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\chain_rule_visualization.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\chain_rule_visualization.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:12.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "chain_rule_3d.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\chain_rule_3d.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\chain_rule_3d.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:11.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "backpropagation_steps.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\backpropagation_steps.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\backpropagation_steps.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:10.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "backpropagation.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\backpropagation.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\backpropagation.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:08.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "activation_functions.png",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\activation_functions.png",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\images\\activation_functions.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-23T20:27:04.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "styles.css",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\css\\styles.css",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\css\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-23T20:26:57.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "interactive.css",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\css\\interactive.css",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\css\\interactive.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-23T20:26:57.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main.js",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\main.js",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\main.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-23T20:26:57.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "interactive.js",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\interactive.js",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\interactive.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-23T20:26:57.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "demos.js",
+              "DocumentMoniker": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\demos.js",
+              "ToolTip": "D:\\AI\\Workshop\\workshop_website\\workshop_website\\js\\demos.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-23T20:26:56.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

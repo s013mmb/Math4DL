@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Calculus to AI: Mathematical Foundations of Deep Learning</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">Calculus to AI</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                    <li><a href="neural_networks.html">Neural Networks</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="code_examples.html">Code Examples</a></li>
+                    <li><a href="teaching.html">Teaching Resources</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>Mathematical Foundations</li>
+            </ul>
+        </div>
+
+        <h1>Mathematical Foundations of Deep Learning</h1>
+        
+        <section>
+            <h2>Key Mathematical Concepts in Deep Learning</h2>
+            <p>Deep learning is built upon several fundamental mathematical concepts that are taught in standard calculus and linear algebra courses. Understanding these concepts is crucial for grasping how neural networks function and how they are trained.</p>
+            
+            <ul>
+                <li><strong>Chain Rule:</strong> The core of the backpropagation algorithm</li>
+                <li><strong>Partial Differentiation:</strong> Essential for handling multiple variables in neural networks</li>
+                <li><strong>Gradients:</strong> Vectors that indicate the direction of steepest ascent/descent</li>
+                <li><strong>Vectors and Matrices:</strong> Enable efficient computation in neural networks</li>
+                <li><strong>Optimization Theory:</strong> Helps find minima of complex loss functions</li>
+            </ul>
+            
+            <p>These mathematical concepts form the foundation of deep learning. The beauty of neural networks is that they're essentially applied calculus at scale. Understanding these connections can help students see the relevance of the mathematics they're learning.</p>
+        </section>
+
+        <section>
+            <h2>The Chain Rule in Neural Networks</h2>
+            <p>The chain rule is perhaps the most important calculus concept in neural networks. It allows us to calculate how changes in the input affect the output through multiple layers of transformations. This is the mathematical foundation of the backpropagation algorithm.</p>
+            
+            <div class="image-container">
+                <img src="../images/chain_rule_visualization.png" alt="Chain Rule Visualization">
+                <p class="caption">The chain rule allows us to compute derivatives through compositions of functions</p>
+            </div>
+            
+            <p>In calculus, the chain rule states that if y = g(f(x)), then:</p>
+            <pre><code>dy/dx = (dy/du) * (du/dx) where u = f(x)</code></pre>
+            
+            <p>In neural networks, we have compositions of many functions (layers), and the chain rule allows us to compute derivatives efficiently by working backward from the output to the input.</p>
+            
+            <div class="image-container">
+                <img src="../images/chain_rule_3d.png" alt="3D Visualization of Chain Rule">
+                <p class="caption">Visualizing the chain rule in three dimensions</p>
+            </div>
+            
+            <p>This 3D visualization helps us understand how the chain rule works in practice. We can see how changes propagate through the composite function. In neural networks, we have compositions of many functions, and the chain rule allows us to compute derivatives efficiently.</p>
+        </section>
+
+        <section>
+            <h2>Partial Derivatives and Gradients</h2>
+            <p>Neural networks have many parameters (weights and biases) that need to be optimized during training. Partial derivatives help us understand how changing each parameter affects the output.</p>
+            
+            <ul>
+                <li>Neural networks have many parameters (weights and biases)</li>
+                <li>Need to compute how each parameter affects the output</li>
+                <li>Partial derivatives measure rate of change with respect to one variable</li>
+                <li>Gradient vector contains all partial derivatives</li>
+                <li>Gradient points in direction of steepest increase</li>
+            </ul>
+            
+            <p>Partial derivatives are essential because neural networks have many parameters. We need to know how changing each parameter affects the output. The gradient vector, which contains all partial derivatives, tells us the direction of steepest increase, which is crucial for optimization.</p>
+            
+            <p>For a function f(x, y, z), the gradient is:</p>
+            <pre><code>∇f = [∂f/∂x, ∂f/∂y, ∂f/∂z]</code></pre>
+            
+            <p>In neural networks, we compute the gradient of the loss function with respect to all parameters to determine how to update them during training.</p>
+        </section>
+
+        <section>
+            <h2>Gradient Descent Optimization</h2>
+            <p>Gradient descent is the optimization algorithm used to train neural networks. It works by iteratively moving in the direction of steepest descent (negative gradient) to find the minimum of the loss function.</p>
+            
+            <div class="image-container">
+                <img src="../images/gradient_descent_3d.png" alt="Gradient Descent Optimization">
+                <p class="caption">Gradient descent finds the minimum of the loss function by iteratively moving in the direction of steepest descent</p>
+            </div>
+            
+            <p>The basic algorithm for gradient descent is:</p>
+            <pre><code>θ = θ - α * ∇J(θ)</code></pre>
+            <p>where:</p>
+            <ul>
+                <li>θ represents the parameters (weights and biases)</li>
+                <li>α is the learning rate (step size)</li>
+                <li>∇J(θ) is the gradient of the loss function with respect to the parameters</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="../images/gradient_descent_contour.png" alt="Gradient Descent Contour View">
+                <p class="caption">Contour plot showing gradient descent paths with different learning rates</p>
+            </div>
+            
+            <p>This contour plot shows gradient descent paths with different learning rates. Notice how higher learning rates take larger steps but may overshoot the minimum, while lower learning rates take smaller steps but converge more slowly. Finding the right learning rate is a key challenge in training neural networks.</p>
+        </section>
+
+        <div class="continue-exploring">
+            <h3>Continue Exploring</h3>
+            <ul>
+                <li><a href="neural_networks.html">Neural Network Architecture and Forward Propagation</a></li>
+                <li><a href="training.html">Training Neural Networks: Backpropagation and Gradient Descent</a></li>
+                <li><a href="code_examples.html">Code Examples and Implementations</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                        <li><a href="neural_networks.html">Neural Networks</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="code_examples.html">Code Examples</a></li>
+                        <li><a href="teaching.html">Teaching Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.deeplearningbook.org/" target="_blank">Deep Learning Book</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank">3Blue1Brown Neural Networks</a></li>
+                        <li><a href="http://cs231n.stanford.edu/" target="_blank">Stanford CS231n</a></li>
+                        <li><a href="http://neuralnetworksanddeeplearning.com/" target="_blank">Neural Networks and Deep Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About This Workshop</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 From Calculus to AI Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

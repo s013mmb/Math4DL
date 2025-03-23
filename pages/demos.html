@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Demos - From Calculus to AI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/interactive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .demo-container {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .demo-controls {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #4472c4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            background-color: #365aa1;
+        }
+        
+        select, input[type="range"] {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">Calculus to AI</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                    <li><a href="neural_networks.html">Neural Networks</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="code_examples.html">Code Examples</a></li>
+                    <li><a href="teaching.html">Teaching Resources</a></li>
+                    <li><a href="interactive.html">Interactive</a></li>
+                    <li><a href="demos.html">Live Demos</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>Interactive Demos</li>
+            </ul>
+        </div>
+
+        <h1>Interactive Demonstrations</h1>
+        
+        <section>
+            <h2>Explore Mathematical Concepts Through Live Demonstrations</h2>
+            <p>This page provides interactive demonstrations that allow you to experiment with the mathematical concepts underlying deep learning. These demos are designed to build intuition and can be valuable teaching tools in the classroom.</p>
+        </section>
+
+        <section>
+            <h2>Neural Network Architecture</h2>
+            <p>This interactive demo allows you to visualize a neural network architecture. You can adjust the number of hidden layers and neurons per layer to see how the network structure changes.</p>
+            
+            <div class="demo-container" id="neural-network-demo">
+                <h3>Neural Network Visualization</h3>
+                <p>Use the controls below to customize the neural network architecture:</p>
+                <!-- Canvas and controls will be added by JavaScript -->
+            </div>
+            
+            <p>Neural networks consist of layers of interconnected neurons. The input layer receives the data, hidden layers process it through weighted connections, and the output layer produces the final result. The structure of a neural network significantly impacts its learning capacity and performance.</p>
+        </section>
+
+        <section>
+            <h2>Gradient Descent Optimization</h2>
+            <p>This interactive demo visualizes the gradient descent optimization process. You can adjust the learning rate and number of iterations to see how these parameters affect convergence.</p>
+            
+            <div class="demo-container" id="gradient-descent-demo">
+                <h3>Gradient Descent Visualization</h3>
+                <p>Use the controls below to customize the gradient descent process:</p>
+                <!-- Canvas and controls will be added by JavaScript -->
+            </div>
+            
+            <p>Gradient descent is an optimization algorithm used to minimize the loss function in neural networks. It works by iteratively moving in the direction of steepest descent (negative gradient). The learning rate controls the step size, with higher values potentially converging faster but risking overshooting the minimum.</p>
+        </section>
+
+        <section>
+            <h2>Activation Functions</h2>
+            <p>This interactive demo allows you to explore different activation functions used in neural networks and their derivatives. Understanding activation functions is crucial for grasping how neural networks introduce non-linearity.</p>
+            
+            <div class="demo-container" id="activation-functions-demo">
+                <h3>Activation Functions Visualization</h3>
+                <p>Select an activation function and toggle the derivative display:</p>
+                <!-- Canvas and controls will be added by JavaScript -->
+            </div>
+            
+            <p>Activation functions introduce non-linearity into neural networks, allowing them to learn complex patterns. Common activation functions include:</p>
+            <ul>
+                <li><strong>Sigmoid:</strong> Squashes values between 0 and 1, useful for output layers in binary classification</li>
+                <li><strong>ReLU (Rectified Linear Unit):</strong> Returns 0 for negative inputs and the input value for positive inputs, helps mitigate the vanishing gradient problem</li>
+                <li><strong>Tanh:</strong> Squashes values between -1 and 1, often used in hidden layers</li>
+                <li><strong>Leaky ReLU:</strong> A variant of ReLU that allows a small gradient for negative inputs, addressing the "dying ReLU" problem</li>
+            </ul>
+            
+            <p>The derivatives of these functions are crucial for backpropagation, as they determine how errors propagate through the network during training.</p>
+        </section>
+
+        <section>
+            <h2>Classroom Applications</h2>
+            <p>These interactive demonstrations can be valuable teaching tools in the classroom. Here are some ways to use them:</p>
+            
+            <ul>
+                <li><strong>Neural Network Architecture:</strong> Use the neural network demo to show how adding layers and neurons increases the network's complexity and capacity to learn</li>
+                <li><strong>Gradient Descent:</strong> Use the gradient descent demo to illustrate how the learning rate affects convergence speed and stability</li>
+                <li><strong>Activation Functions:</strong> Use the activation functions demo to compare different functions and their derivatives, explaining why certain functions are preferred for specific layers</li>
+            </ul>
+            
+            <p>By incorporating these interactive demonstrations into your teaching, you can make abstract mathematical concepts more concrete and engaging for students.</p>
+        </section>
+
+        <div class="continue-exploring">
+            <h3>Continue Exploring</h3>
+            <ul>
+                <li><a href="mathematical_foundations.html">Mathematical Foundations of Deep Learning</a></li>
+                <li><a href="neural_networks.html">Neural Network Architecture and Forward Propagation</a></li>
+                <li><a href="training.html">Training Neural Networks: Backpropagation and Gradient Descent</a></li>
+                <li><a href="code_examples.html">Code Examples and Implementations</a></li>
+                <li><a href="teaching.html">Teaching Resources and Classroom Applications</a></li>
+                <li><a href="interactive.html">Interactive Visualizations</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                        <li><a href="neural_networks.html">Neural Networks</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="code_examples.html">Code Examples</a></li>
+                        <li><a href="teaching.html">Teaching Resources</a></li>
+                        <li><a href="interactive.html">Interactive</a></li>
+                        <li><a href="demos.html">Live Demos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.deeplearningbook.org/" target="_blank">Deep Learning Book</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank">3Blue1Brown Neural Networks</a></li>
+                        <li><a href="http://cs231n.stanford.edu/" target="_blank">Stanford CS231n</a></li>
+                        <li><a href="http://neuralnetworksanddeeplearning.com/" target="_blank">Neural Networks and Deep Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About This Workshop</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 From Calculus to AI Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/interactive.js"></script>
+    <script src="../js/demos.js"></script>
+</body>
+</html>

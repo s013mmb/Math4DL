@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Architecture - From Calculus to AI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">Calculus to AI</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                    <li><a href="neural_networks.html">Neural Networks</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="code_examples.html">Code Examples</a></li>
+                    <li><a href="teaching.html">Teaching Resources</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>Neural Network Architecture</li>
+            </ul>
+        </div>
+
+        <h1>Neural Network Architecture and Forward Propagation</h1>
+        
+        <section>
+            <h2>Structure of Neural Networks</h2>
+            <p>Neural networks are computational models inspired by the human brain. They consist of layers of interconnected nodes (neurons) that process information. A typical neural network has three types of layers:</p>
+            
+            <ul>
+                <li><strong>Input Layer:</strong> Receives the initial data</li>
+                <li><strong>Hidden Layers:</strong> Process the information through weighted connections</li>
+                <li><strong>Output Layer:</strong> Produces the final result</li>
+            </ul>
+            
+            <div class="image-container">
+                <img src="../images/neural_network_architecture.png" alt="Neural Network Architecture">
+                <p class="caption">A neural network consists of layers of interconnected neurons</p>
+            </div>
+            
+            <p>Each connection between neurons has a weight, and each neuron applies an activation function to its weighted sum of inputs. The forward propagation process is how data flows through the network to produce predictions.</p>
+        </section>
+
+        <section>
+            <h2>Mathematical Representation</h2>
+            <p>Mathematically, each neuron in a neural network computes a weighted sum of its inputs, adds a bias term, and then applies an activation function:</p>
+            
+            <pre><code>z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b
+a = σ(z)</code></pre>
+            
+            <p>Where:</p>
+            <ul>
+                <li>x₁, x₂, ..., xₙ are the inputs to the neuron</li>
+                <li>w₁, w₂, ..., wₙ are the weights associated with each input</li>
+                <li>b is the bias term</li>
+                <li>z is the weighted sum (pre-activation)</li>
+                <li>σ is the activation function</li>
+                <li>a is the output of the neuron (post-activation)</li>
+            </ul>
+            
+            <p>For a layer of neurons, we can represent this computation using matrix operations:</p>
+            
+            <pre><code>Z = XW + b
+A = σ(Z)</code></pre>
+            
+            <p>Where:</p>
+            <ul>
+                <li>X is the input matrix (or output from the previous layer)</li>
+                <li>W is the weight matrix for the current layer</li>
+                <li>b is the bias vector</li>
+                <li>Z is the pre-activation matrix</li>
+                <li>A is the post-activation matrix (output of the layer)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Activation Functions</h2>
+            <p>Activation functions introduce non-linearity into the network. Without them, a neural network would just be a series of linear transformations, which could be collapsed into a single linear transformation.</p>
+            
+            <div class="image-container">
+                <img src="../images/activation_functions.png" alt="Activation Functions">
+                <p class="caption">Common activation functions and their derivatives</p>
+            </div>
+            
+            <p>Common activation functions include:</p>
+            
+            <ul>
+                <li><strong>Sigmoid:</strong> σ(z) = 1/(1+e^(-z))
+                    <ul>
+                        <li>Squashes values between 0 and 1</li>
+                        <li>Derivative: σ'(z) = σ(z)(1-σ(z))</li>
+                    </ul>
+                </li>
+                <li><strong>ReLU (Rectified Linear Unit):</strong> f(z) = max(0, z)
+                    <ul>
+                        <li>Returns 0 for negative inputs, z for positive inputs</li>
+                        <li>Derivative: f'(z) = 0 if z < 0, 1 if z > 0</li>
+                    </ul>
+                </li>
+                <li><strong>Tanh:</strong> tanh(z) = (e^z - e^(-z))/(e^z + e^(-z))
+                    <ul>
+                        <li>Squashes values between -1 and 1</li>
+                        <li>Derivative: tanh'(z) = 1 - tanh²(z)</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <p>The choice of activation function can significantly impact the performance of a neural network. ReLU is commonly used in hidden layers due to its computational efficiency and ability to mitigate the vanishing gradient problem.</p>
+        </section>
+
+        <section>
+            <h2>Forward Propagation</h2>
+            <p>Forward propagation is the process of passing input data through the network to generate predictions. It involves the following steps:</p>
+            
+            <ol>
+                <li>Input values are fed into the network</li>
+                <li>Each neuron computes a weighted sum of its inputs</li>
+                <li>An activation function is applied to introduce non-linearity</li>
+                <li>The output becomes input for the next layer</li>
+                <li>The process continues until the output layer</li>
+            </ol>
+            
+            <p>For a neural network with L layers, forward propagation can be represented as:</p>
+            
+            <pre><code>A⁰ = X  # Input layer
+For l = 1 to L:
+    Z^l = A^(l-1)W^l + b^l
+    A^l = σ^l(Z^l)
+Y_pred = A^L  # Output layer</code></pre>
+            
+            <p>Where:</p>
+            <ul>
+                <li>A⁰ is the input data</li>
+                <li>Z^l is the pre-activation for layer l</li>
+                <li>A^l is the post-activation for layer l</li>
+                <li>W^l is the weight matrix for layer l</li>
+                <li>b^l is the bias vector for layer l</li>
+                <li>σ^l is the activation function for layer l</li>
+                <li>Y_pred is the final output (prediction)</li>
+            </ul>
+        </section>
+
+        <div class="continue-exploring">
+            <h3>Continue Exploring</h3>
+            <ul>
+                <li><a href="mathematical_foundations.html">Mathematical Foundations of Deep Learning</a></li>
+                <li><a href="training.html">Training Neural Networks: Backpropagation and Gradient Descent</a></li>
+                <li><a href="code_examples.html">Code Examples and Implementations</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="mathematical_foundations.html">Mathematical Foundations</a></li>
+                        <li><a href="neural_networks.html">Neural Networks</a></li>
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="code_examples.html">Code Examples</a></li>
+                        <li><a href="teaching.html">Teaching Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.deeplearningbook.org/" target="_blank">Deep Learning Book</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank">3Blue1Brown Neural Networks</a></li>
+                        <li><a href="http://cs231n.stanford.edu/" target="_blank">Stanford CS231n</a></li>
+                        <li><a href="http://neuralnetworksanddeeplearning.com/" target="_blank">Neural Networks and Deep Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About This Workshop</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 From Calculus to AI Workshop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
