@@ -1,0 +1,1 @@
+This static web sites hosts pages related to a workshop I provided for mathematics instructors. The workshop aims to bridge the gap between mathematics education and the understanding of how modern AI models are constructed.
